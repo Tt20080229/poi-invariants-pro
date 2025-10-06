@@ -1,0 +1,32 @@
+```toml
+# pyproject.toml
+[project]
+name = "poi-invariants-pro"
+version = "0.3.1"
+description = "Production-ready skeleton for verifiable AI inference (AI × ZK)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="POI Maintainers"}]
+license = {text="MIT"}
+dependencies = [
+  "click>=8.1,<9.0",
+  "orjson>=3.9,<4.0",
+  "pysha3>=1.0,<2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/example/poi-invariants-pro"
+
+[project.scripts]
+poi = "poi_invariants_pro.cli:main"
+
+[tool.setuptools.package-data]
+poi_invariants_pro = [
+  "circom/lib/*.circom",
+  "circom/main.tmpl",
+  "VERSION"
+]
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
